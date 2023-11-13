@@ -19,19 +19,6 @@ struct Users
         char active[20];
       }act;
 
-      //  struct 
-      // {
-      //   int active;
-      //   int intactive;
-      // }actint;
-
-      // struct 
-      // {
-      //   int active;
-      //   bool boolactive;
-      // }actbool;
-      
-       
     } chk_act ;
 
 
@@ -73,7 +60,7 @@ union check_active chk_act;
     printf("\n 1 | true- Active :  \n");
     printf("\n 0 | false- Not Active :  \n");
     printf("\n Enter active_state : ");
-       // printf("\nEnter active_state t or f or 0 or 1 : ");
+    
     scanf("%s", &state);
 
         switch (state) {
@@ -82,8 +69,6 @@ union check_active chk_act;
             
               strcpy(chk_act.act.active,"true");
               strcpy(insertuser.actived,chk_act.act.active);
-              //  printf("\nEnter active_state  0 or 1 : ");
-              //  scanf("%d",chk_act.actint.intactive);
                break;
 
             case '0':
@@ -91,8 +76,7 @@ union check_active chk_act;
                
                 strcpy(chk_act.act.active,"false");
                 strcpy(insertuser.actived,chk_act.act.active);
-                // printf("\nEnter active_state true or false : ");
-                //  scanf("%d",chk_act.actbool.active);
+                
                  break;
 
             default:
@@ -100,11 +84,9 @@ union check_active chk_act;
             
         }
 
-    // printf("\nEnter active_state true or false or 0 or 1 : ");
-    // scanf("%d",chk_act.);
 
     users[num_user++] = insertuser;
-    //num_user++;
+
     
     printf("\nRegistration Successfully \n");
 
@@ -127,10 +109,7 @@ union check_active chk_act;
     printf("\nEnter password: ");
     scanf("%s",pass);
 
-    // printf("\nEnter active_state  true or false : \n");
-    // scanf("%d", state);
-
-
+    
     for(int i=0 ; i<num_user ; i++){
         if ( strcmp(user_name,users[i].username) ==0 && strcmp(pass,users[i].password)==0) {
               strcpy( chk_act.act.active , "false");
